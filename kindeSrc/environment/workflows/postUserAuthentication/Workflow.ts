@@ -1,3 +1,19 @@
+import {
+  onPostAuthenticationEvent,
+  WorkflowSettings,
+  WorkflowTrigger,
+} from "@kinde/infrastructure";
+
+// The setting for this workflow
+export const workflowSettings: WorkflowSettings = {
+  id: "onPostUserAuthentication",
+  trigger: WorkflowTrigger.PostAuthentication,
+};
+
+// The workflow code to be executed when the event is triggered
+export default async function Workflow(event: onPostAuthenticationEvent) {
+  console.log("Hello world");
+}
 // import { accessTokenCustomClaims, onUserTokenGeneratedEvent } from "@kinde/infrastructure";
 
 // export const workflowSettings = {
@@ -12,15 +28,15 @@
 // }
 
 
-import type { onM2mTokenGeneratedEvent } from "@kinde/infrastructure";
+// import type { onM2mTokenGeneratedEvent } from "@kinde/infrastructure";
 
-export const workflowSettings = {
-  id: "addExternalOrgId",
-  trigger: "m2m:token_generation",
-  bindings: { "kinde.m2mToken": {} }
-};
+// export const workflowSettings = {
+//   id: "addExternalOrgId",
+//   trigger: "m2m:token_generation",
+//   bindings: { "kinde.m2mToken": {} }
+// };
 
-export default async function (event: onM2mTokenGeneratedEvent) {
-  kinde.m2mToken.setCustomClaim("external_org_id", "acme-43");
-  console.log("foo test");
-}
+// export default async function (event: onM2mTokenGeneratedEvent) {
+//   kinde.m2mToken.setCustomClaim("external_org_id", "acme-43");
+//   console.log("foo test");
+// }
