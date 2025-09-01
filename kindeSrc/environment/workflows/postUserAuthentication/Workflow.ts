@@ -1,5 +1,5 @@
 import {
-  onM2MTokenGeneratedEvent,
+  onUserTokenGeneratedEvent,
   WorkflowSettings,
   WorkflowTrigger,
 } from "@kinde/infrastructure";
@@ -8,10 +8,10 @@ export const workflowSettings: WorkflowSettings = {
   id: "addExternalOrgIdVal",
   // bindings: { "kinde.accessToken": {} },
   bindings: { "kinde.accessToken": {} },
-  trigger: WorkflowTrigger.M2MTokenGeneration,
+  trigger: WorkflowTrigger.UserTokenGeneration,
 };
 
-export default async function Workflow(event: onM2MTokenGeneratedEvent) {
+export default async function Workflow(event: onUserTokenGeneratedEvent) {
   console.log("Bye world");
 }
 // import { accessTokenCustomClaims, onUserTokenGeneratedEvent } from "@kinde/infrastructure";
