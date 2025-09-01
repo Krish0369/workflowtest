@@ -13,7 +13,7 @@ export const workflowSettings: WorkflowSettings = {
 
 export default async function Workflow(event: onUserTokenGeneratedEvent) {
   console.log("Good world");
-    const accessToken = accessTokenCustomClaims<{ foobar: number }>();
+  const accessToken = accessTokenCustomClaims<{ foobar: number }>();
   accessToken.foobar = 42;
 }
 // import { accessTokenCustomClaims, onUserTokenGeneratedEvent } from "@kinde/infrastructure";
