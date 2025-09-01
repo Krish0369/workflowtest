@@ -6,6 +6,7 @@ import {
 
 // The setting for this workflow
 export const workflowSettings: WorkflowSettings = {
+  bindings: { "kinde.m2mToken": {} }
   id: "onPostUserAuthentication",
   trigger: WorkflowTrigger.PostAuthentication,
 };
