@@ -7,7 +7,7 @@ import {
 // The setting for this workflow
 export const workflowSettings: WorkflowSettings = {
   id: "onPostUserAuthentication",
-  trigger: WorkflowTrigger.PostAuthentication,
+  trigger: WorkflowTrigger.M2MTokenGeneration,
 };
 
 // The workflow code to be executed when the event is triggered
