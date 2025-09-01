@@ -6,7 +6,7 @@ import {
 } from "@kinde/infrastructure";
 
 export const workflowSettings: WorkflowSettings = {
-  id: "addExternalOrgIdVal",
+  id: "addFoo",
   bindings: { "kinde.accessToken": {} },
   trigger: WorkflowTrigger.UserTokenGeneration,
 };
