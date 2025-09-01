@@ -1,4 +1,6 @@
 export const workflowSettings = {
+  id: "addExternalOrgId",
+  trigger: "m2m:token_generation",
   bindings: { "kinde.m2mToken": {} }
 };
 
