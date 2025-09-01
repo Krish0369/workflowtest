@@ -4,16 +4,16 @@ import {
   WorkflowTrigger,
 } from "@kinde/infrastructure";
 
-// The setting for this workflow
 export const workflowSettings: WorkflowSettings = {
   id: "addExternalOrgId",
-  bindings: { "kinde.accessToken": {} },
+  // bindings: { "kinde.accessToken": {} },
+  bindings: { "kinde.m2mToken": {} },
   trigger: WorkflowTrigger.M2MTokenGeneration,
 };
 
-// The workflow code to be executed when the event is triggered
 export default async function Workflow(event: onM2MTokenGeneratedEvent) {
-  console.log("Hello world");
+  console.log("Bye world");
+  kinde.m2mToken.setCustomClaim("external_org_id", "acme-43");
 }
 // import { accessTokenCustomClaims, onUserTokenGeneratedEvent } from "@kinde/infrastructure";
 
