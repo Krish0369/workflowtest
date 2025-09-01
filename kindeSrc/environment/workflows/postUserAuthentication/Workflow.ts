@@ -6,7 +6,7 @@ import {
 } from "@kinde/infrastructure";
 
 export const workflowSettings: WorkflowSettings = {
-  id: "addFoo",
+  id: "addFooBarToToken",
   bindings: { "kinde.accessToken": {} },
   trigger: WorkflowTrigger.UserTokenGeneration,
 };
