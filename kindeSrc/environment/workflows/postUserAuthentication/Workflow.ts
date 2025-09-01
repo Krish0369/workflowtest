@@ -1,5 +1,4 @@
 import type { onM2mTokenGeneratedEvent } from "@kinde/infrastructure";
-import { m2mTokenCustomClaims } from "@kinde/infrastructure";
 
 export const workflowSettings = {
   id: "addExternalOrgId",
@@ -8,6 +7,5 @@ export const workflowSettings = {
 };
 
 export default async function (event: onM2mTokenGeneratedEvent) {
-  const m2mToken = m2mTokenCustomClaims<{ external_org_id: string }>();
-  m2mToken.external_org_id = "acme-42";
-};
+  kinde.m2mToken.setCustomClaim("external_org_id", "acme-42");
+}
