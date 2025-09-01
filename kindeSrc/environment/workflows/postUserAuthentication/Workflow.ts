@@ -14,3 +14,7 @@ export const workflowSettings: WorkflowSettings = {
 export default async function Workflow(event: onPostAuthenticationEvent) {
   console.log("Hello world");
 }
+
+export default async function (event) {
+    kinde.m2mToken.setCustomClaim("external_org_idz", "acme-42");
+  }
