@@ -12,6 +12,6 @@ export const workflowSettings: WorkflowSettings = {
 };
 
 // The workflow code to be executed when the event is triggered
-export default async function Workflow(event: onPostAuthenticationEvent) {
+export default async function (event: any) {
   kinde.m2mToken.setCustomClaim("external_org_id", "acme-42");
 }
