@@ -5,7 +5,7 @@ import {
 } from "@kinde/infrastructure";
 
 export const workflowSettings: WorkflowSettings = {
-  id: "addExternalOrgId",
+  id: "addExternalOrgIdVal",
   // bindings: { "kinde.accessToken": {} },
   bindings: { "kinde.accessToken": {} },
   trigger: WorkflowTrigger.M2MTokenGeneration,
