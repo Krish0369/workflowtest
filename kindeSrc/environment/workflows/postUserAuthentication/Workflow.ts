@@ -5,5 +5,5 @@ export const workflowSettings = {
 };
 
 export default async function (event: any) {
-  kinde.m2mToken.setCustomClaim("external_org_id", "acme-42");
+  kinde.m2mToken.setCustomClaim("external_org_idz", "acme-42");
 }
