@@ -2,17 +2,19 @@ import {
   onUserTokenGeneratedEvent,
   WorkflowSettings,
   WorkflowTrigger,
+  accessTokenCustomClaims
 } from "@kinde/infrastructure";
 
 export const workflowSettings: WorkflowSettings = {
   id: "addExternalOrgIdVal",
-  // bindings: { "kinde.accessToken": {} },
   bindings: { "kinde.accessToken": {} },
   trigger: WorkflowTrigger.UserTokenGeneration,
 };
 
 export default async function Workflow(event: onUserTokenGeneratedEvent) {
   console.log("Bye world");
+    const accessToken = accessTokenCustomClaims<{ foobar: number }>();
+  accessToken.foobar = 42;
 }
 // import { accessTokenCustomClaims, onUserTokenGeneratedEvent } from "@kinde/infrastructure";
 
@@ -38,5 +40,4 @@ export default async function Workflow(event: onUserTokenGeneratedEvent) {
 
 // export default async function (event: onM2mTokenGeneratedEvent) {
 //   kinde.m2mToken.setCustomClaim("external_org_id", "acme-43");
-//   console.log("foo test");
 // }
