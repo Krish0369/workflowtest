@@ -13,8 +13,6 @@ export const workflowSettings: WorkflowSettings = {
 
 export default async function Workflow(event: onM2MTokenGeneratedEvent) {
   console.log("Bye world");
-  const accessToken = accessTokenCustomClaims<{ foo_bar: string }>();
-  accessToken.foo_bar = "your_value_here";
 }
 // import { accessTokenCustomClaims, onUserTokenGeneratedEvent } from "@kinde/infrastructure";
 
