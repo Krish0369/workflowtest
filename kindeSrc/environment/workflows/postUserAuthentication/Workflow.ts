@@ -20,7 +20,7 @@ export const workflowSettings = {
   bindings: { "kinde.m2mToken": {} }
 };
 
-export default async function (event: any) {
+export default async function (event: onM2mTokenGeneratedEvent) {
   kinde.m2mToken.setCustomClaim("external_org_id", "acme-43");
   console.log("foo test");
 }
