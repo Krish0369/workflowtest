@@ -13,7 +13,8 @@ export const workflowSettings: WorkflowSettings = {
 
 export default async function Workflow(event: onM2MTokenGeneratedEvent) {
   console.log("Bye world");
-  kinde.m2mToken.setCustomClaim("external_org_id", "acme-43");
+  const accessToken = accessTokenCustomClaims<{ foo_bar: string }>();
+  accessToken.foo_bar = "your_value_here";
 }
 // import { accessTokenCustomClaims, onUserTokenGeneratedEvent } from "@kinde/infrastructure";
 
